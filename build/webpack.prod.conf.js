@@ -44,13 +44,5 @@ module.exports = merge(baseConfig, {
     disableHostCheck: true,
     quiet: true, // 使用 FriendlyErrorsWebpackPlugin ，可设置此选项来关闭控制台不必要的信息
   },
-  resolve: {
-    // 用于配置可解析的后缀名，其中缺省为 js 和 json
-    extensions: ['.js', '.jsx', '.json', '.vue'],
-    alias: {
-      '@': resolve('src'), // 为项目根目录中 src 目录配置别名 #
-      'vue$': 'vue/dist/vue.esm.js'
-    }
-  },
   plugins
 });
