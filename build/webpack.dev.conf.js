@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const config = require('../src/common/config.js');
@@ -40,8 +39,6 @@ const plugins = [
     vendorJsName: bundleConfig.vendor.js,
     inject: true,
   }),
-  new webpack.NamedModulesPlugin(),
-  new webpack.HotModuleReplacementPlugin(),
 ];
 
 module.exports = merge(baseConfig, {
@@ -50,11 +47,10 @@ module.exports = merge(baseConfig, {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: [resolve('public'), resolve('vendor')], // 配置多个数据源
-    inline: false,
+    inline: true,
     host: '127.0.0.1',
     port: config.port,
     // open: true, // 自动拉取浏览器
-    hot: true,
     disableHostCheck: true,
     quiet: true, // 使用 FriendlyErrorsWebpackPlugin ，可设置此选项来关闭控制台不必要的信息
   },
