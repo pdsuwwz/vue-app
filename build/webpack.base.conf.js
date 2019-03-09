@@ -141,4 +141,14 @@ module.exports = {
       },
     }),
   ],
+  resolve: {
+    // 用于配置可解析的后缀名，其中缺省为 js 和 json
+    extensions: ['.js', '.jsx', '.json', '.vue'],
+    alias: { // 简化引用的路径名称
+      '@': resolve('src'),
+      '_c': resolve('src/components'),
+      '_assets': path.join(__dirname, '../assets/'),
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
 }

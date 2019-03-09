@@ -10,7 +10,7 @@
 export default {
     data: function(){
         return {
-            hello: '点我233'
+            hello: '点我'
         }
     },
     methods: {
@@ -33,7 +33,9 @@ export default {
         .logo {
             width: 200px;
             height: 200px;
-            background-image: url('~@/assets/home/logo.png');
+            // 相对路径和别名路径均适用
+            // background-image: url('./assets/logo.png');
+            background-image: url('~_assets/home/logo.png'); // 别名路径注意要加 ~ 符号
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;

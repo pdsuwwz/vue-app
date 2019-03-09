@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-import Hello from '../../components/Hello'
+import Hello from '_c/Hello'
 export default {
     data(){
         return {
