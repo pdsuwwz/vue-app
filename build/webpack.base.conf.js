@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const fs = require('fs');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -11,12 +10,11 @@ const resolve = (dir) => path.join(__dirname, '..', dir)
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: {
-    bundle: ['webpack-hot-middleware/client', '@babel/polyfill', './src/styles/index.js', './src/index.js'],
+    bundle: ['@babel/polyfill', './src/styles/index.js', './src/main.js'],
   },
   output: {
     path: resolve('public'),
     filename: "bundle.js",
-    publicPath: '/'
   },
   performance: {
     hints: false

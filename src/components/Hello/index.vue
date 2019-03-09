@@ -10,7 +10,7 @@
 export default {
     data: function(){
         return {
-            hello: '点我'
+            hello: '点我233'
         }
     },
     methods: {
@@ -20,7 +20,7 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     .hello {
         display: flex;
         flex-flow: column;
