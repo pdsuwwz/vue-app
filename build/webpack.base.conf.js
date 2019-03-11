@@ -21,23 +21,23 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   enforce: 'pre',
-      //   test: /\.(vue|js)(\?.*)?$/,
-      //   loader: 'eslint-loader',
-      //   include: resolve('src'),
-      //   options: {
-      //     fix: true,
-      //     // cache: resolve('.cache/eslint'),
-      //     failOnError: true, // 生产环境发现代码不合法，则中断编译
-      //     useEslintrc: true,
-      //     configFile: resolve('.eslintrc.js'),
-      //     formatter: require('eslint-friendly-formatter'),
-      //     // baseConfig: {
-      //     //   extends: [resolve('.eslintrc.js')]
-      //     // }
-      //   }
-      // },
+      {
+        enforce: 'pre',
+        test: /\.(vue|js)(\?.*)?$/,
+        loader: 'eslint-loader',
+        include: resolve('src'),
+        options: {
+          fix: true,
+          // cache: resolve('.cache/eslint'),
+          failOnError: true, // 生产环境发现代码不合法，则中断编译
+          useEslintrc: true,
+          configFile: resolve('.eslintrc.js'),
+          formatter: require('eslint-friendly-formatter'),
+          // baseConfig: {
+          //   extends: [resolve('.eslintrc.js')]
+          // }
+        }
+      },
       {
         test: /\.vue$/,
         use: {

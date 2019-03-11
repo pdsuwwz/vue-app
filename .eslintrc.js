@@ -1,8 +1,7 @@
 const eslintConfig = {
   "root": true,
-  "parser": "babel-eslint",
   "parserOptions": {
-    "sourceType": "module",
+    "parser": "babel-eslint",
     "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
@@ -18,7 +17,7 @@ const eslintConfig = {
     "console": true
   },
   "extends": [
-    "standard",
+    "plugin:vue/essential",
   ],
   "rules": {
     "no-var": 1,
