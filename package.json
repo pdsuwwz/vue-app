@@ -93,10 +93,10 @@
     "url-loader": "^1.1.1",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.8",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.1.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
     "webpack-dev-middleware": "^3.6.1",
-    "webpack-dev-server": "3.1.11",
+    "webpack-dev-server": "^3.5.1",
     "webpack-hot-middleware": "^2.24.3",
     "webpack-merge": "^4.1.4"
   },
